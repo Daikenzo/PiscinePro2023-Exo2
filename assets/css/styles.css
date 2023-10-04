@@ -1,0 +1,201 @@
+/*Styles.css - CityInfo*/
+@font-face {
+    font-family: "Roboto Black";
+    src: "../fonts/Roboto/Roboto-Black.ttf";
+}
+@font-face {
+    font-family: "Roboto Regular";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+/*Global CSS*/
+body{
+    background-color: white;
+    font-family: "Roboto Regular", Helvetica, sans-serif;
+    margin:0px;
+}
+a{
+    text-decoration: none;
+    
+    color:whitesmoke;
+}
+a:not(.navbar .navbarItem){
+    color:none;
+}
+a:hover{
+    color:black;
+}
+
+/*Header and Nav*/
+header{
+    background-color:#808080;
+    color:whitesmoke;
+    /*width:100wv;
+    min-height:7vh;*/
+}
+.navbar{
+    display:flex;
+    max-width: 100%;
+    /*margin:0 auto: split la longteur d'un bloc automatiquement égale dans la zone*/
+    margin:0 auto;
+
+}
+    /*Title & Logo*/
+.SiteTitle{
+    justify-items: auto;
+    align-items: center;
+    position: absolute;
+    width:60%;
+    height:80%;
+    margin:0;
+    display:none;
+}
+.SiteTitle-Container{
+    /*display:none;*/
+    justify-content: flex-start;
+    align-items:flex-end;
+}
+.SiteTitle h1{
+    justify-self: center;
+}
+/* Nav Menu*/
+.main-menu{
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+
+    list-style: none;
+    width:78%;
+    padding:20px 0;
+}
+.navbarItem{
+    padding-left:30px;
+}
+
+/*Main Content CSS Class*/
+
+.section-container{
+    display:flex;
+    justify-content:center;
+}
+/* Section box*/
+.City-ContentBox{
+    width:25%;
+    margin:2rem 1rem;
+    padding-bottom:3rem;
+
+    border:1px solid black;
+    box-shadow:5px 7px 7px grey;
+
+    position:relative;
+}
+.City-ContentBox .City-Describe{
+    padding:1rem;
+}
+.City-ContentBox .City-imgBox{
+    width:100%; /*100% de la  longueur du content*/
+    height:35vh; /*25% de la taille de l'écran*/
+}
+.City-ContentBox .City-imgBox img{
+    position:relative;
+    /*prend la taille de ImgBox*/
+    height:100%;
+    width:100%;
+    /*fix la div de contenu (ici image) selon la taille max
+    fait en sorte que l'image ne sont pas deformé*/
+    object-fit: cover;
+}
+
+
+/*Button*/
+.City-ContentBox .btn{
+    padding: 10px 15px;
+    background-color: midnightblue;
+    color: whitesmoke;
+
+    position: absolute;
+    bottom: 10px;   
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* Btn hover**/
+#City1-Btn{
+    background-color :purple;
+    border: 1px solid purple;
+
+}
+#City1-Btn:hover{
+    color:purple;
+    background-color: whitesmoke;
+}
+#City2-Btn{
+    background-color: #CB4335;
+    border: 1px solid #CB4335;
+
+}
+#City2-Btn:hover{
+    color:#CB4335;
+    background-color: whitesmoke;
+}
+
+#City3-Btn{
+    background-color :#2874A6;
+    border: 1px solid #2874A6;
+
+}
+#City3-Btn:hover{
+    color:#2874A6;
+    background-color: whitesmoke;
+}
+
+/*Footer CSS*/
+body main section:last-child{
+    /*pre-Footer*/
+    display: none;
+}
+footer{
+    display: none;
+}
+
+/*Responsive : toujour faire en fin*/
+
+@media screen and (max-width: 958px) {
+    /*NB: faire du css class descendant*/
+    .navbar {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        /*inerit : annuler / désérité*/
+        height: inherit;
+        width: 100%;
+    }
+    
+    .navbar li {
+        padding: 1rem 0 
+    }
+    .section-container{
+        flex-direction: column;
+    }
+    
+    .City-ContentBox {
+        width: 80%;
+        margin: 1rem auto;
+    }
+    
+    .City-ContentBox .btn {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+.City-ContentBox {
+    position: relative;
+}
+
+.City-ContentBox a {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
